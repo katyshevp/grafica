@@ -19,6 +19,11 @@ namespace WindowsFormsApp1
 			InitializeComponent();
 		}
 
+		private void Form1_Load(object sender, EventArgs e)
+		{
+
+		}
+
 		private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog dialog = new OpenFileDialog();
@@ -32,6 +37,19 @@ namespace WindowsFormsApp1
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			InvertFilter filter = new InvertFilter();
+			Bitmap resultImage = filter.processImage(image);
+			pictureBox1.Image = resultImage;
+			pictureBox1.Refresh();
+		}
+
+		private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
 		{
 
 		}
